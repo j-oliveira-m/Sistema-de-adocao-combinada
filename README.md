@@ -1,1 +1,1 @@
-# Sistema-de-ado-o-combinada
+# Sistema-de-adoção-combinada
