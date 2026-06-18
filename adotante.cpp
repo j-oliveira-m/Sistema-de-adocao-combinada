@@ -1,11 +1,18 @@
 #include "Adotante.h"
 
     Adotante::Adotante(int id, string nome, string endereco, bool temPatio,
-                    string getPreferenciaPorte, string getEstiloVida, bool temTempoLivre,
-                    bool dispostoAtencao): id(id), nome(nome), endereco(endereco),
-                                            temPatio(temPatio), preferenciaPorte(preferenciaPorte),
-                                            estiloVida(estiloVida), temTempoLivre(temTempoLivre),
-                                            dispostoAtencao(dispostoAtencao) {}
+                   string preferenciaPorte, string estiloVida, bool temTempoLivre,
+                   bool dispostoAtencao)
+                    : id(id), nome(nome), endereco(endereco),
+                    temPatio(temPatio), preferenciaPorte(preferenciaPorte),
+                    estiloVida(estiloVida), temTempoLivre(temTempoLivre),
+                    dispostoAtencao(dispostoAtencao) {}
+
+    Adotante::Adotante() : id(-1), nome(""), endereco(""),
+                       temPatio(false), preferenciaPorte(""),
+                       estiloVida(""), temTempoLivre(false),
+                       dispostoAtencao(false) {}
+
 
     void Adotante::cadastrarAdotante(){
         cout << "Digite o nome do adotante: ";
