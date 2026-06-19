@@ -34,6 +34,16 @@
                 bool getTemTempoLivre() const {return temTempoLivre; }
                 bool getDispostoAtencao() const {return dispostoAtencao; }
 
+                // Setters
+        void setNome(const string& n) { nome = n; }
+        void setAnimalComDeficiencia(bool d) { animalComdeficiencia = d; }
+        void setTemPatio(bool p) { temPatio = p; }
+        void setPreferenciaPorte(const string& porte) { preferenciaPorte = porte; }
+        void setEstiloVida(const string& estilo) { estiloVida = estilo; }
+        void setTemTempoLivre(bool t) { temTempoLivre = t; }
+        void setDispostoAtencao(bool a) { dispostoAtencao = a; }
+
+
     };
 
 
