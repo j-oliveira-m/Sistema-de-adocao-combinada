@@ -8,7 +8,7 @@
             std::vector<Adotante> adotantes;
             int ultimoId;
 
-    public:
+        public:
             RepositorioAdotantes() : ultimoId(0) {}
 
             int proximoId() { return ++ultimoId; }
