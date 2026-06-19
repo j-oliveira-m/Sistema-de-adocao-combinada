@@ -11,10 +11,13 @@
         public:
             RepositorioPets() : ultimoId(0) {}
 
-        int proximoId() { return ++ultimoId; }
-        void adicionar(const Pet& pet);
+            int proximoId() { return ++ultimoId; }
+    void adicionar(const Pet& pet);
         Pet buscarPorId(int id);
-        void listarPets();
-    };
+    void listarPets();
+
+    // Novo: acesso ao vetor interno
+        std::vector<Pet>& getPets() { return pets; }
+};
 
 #endif
