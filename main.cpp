@@ -4,10 +4,10 @@ using namespace std;
 
 int main() {
 
-    SistemaAdocaoFacade sistema;
+    SistemaAdocaoFacade sistema;    // objeto que concentra todas as operações do sistema
     int opcao;
 
-    do {
+    do {    // Menu principal
         cout << "\n--- Sistema de Adoção ---\n";
         cout << "1. Cadastrar Adotante\n";
         cout << "2. Cadastrar Pet\n";
@@ -16,46 +16,45 @@ int main() {
         cout << "5. Realizar Match\n";
         cout << "6. Relatório de Pets Disponíveis\n";
         cout << "7. Adotar Pet (remover do relatório)\n";
-        cout << "8. editar cadastro do adotante \n";
         cout << "0. Sair\n";
         cout << "Escolha uma opção: ";
         cin >> opcao;
         cin.ignore();
 
-        switch(opcao) {
+        switch(opcao) {    // Estrutura de decisão para cada opção
             case 1:
-                sistema.cadastrarAdotante();
+                sistema.cadastrarAdotante(); // chama cadastro de adotante
                 break;
             case 2:
-                sistema.cadastrarPet();
+                sistema.cadastrarPet();  // chama cadastro de Pet
                 break;
             case 3:
-                sistema.listarAdotantes();
+                sistema.listarAdotantes();  // mostra todos os adotantes
                 break;
             case 4:
-                sistema.listarPets();
+                sistema.listarPets();  // mostra todos os pets cadastrados
                 break;
             case 5: {
                 int idAdotante;
                     cout << "Digite o ID do adotante: ";
                     cin >> idAdotante;
-                sistema.realizarMatchAutomatico(idAdotante);
+                sistema.realizarMatchAutomatico(idAdotante);  // tenta encontrar pet compatível
                 break;
 }
 
             case 6:
-                sistema.relatorioPetsDisponiveis();
+                sistema.relatorioPetsDisponiveis(); // relatório de pets ainda não adotados
                 break;
             case 7: {
                 int idPet;
                 cout << "Digite o ID do pet a ser adotado: ";
                 cin >> idPet;
-                sistema.removerPet(idPet);
+                sistema.removerPet(idPet); // remove pet do relatório caso seja adotado
                 break;
             }
         
         }
-    } while(opcao != 0);
+    } while(opcao != 0); // repete até o usuário escolher sair
 
     return 0;
 }
