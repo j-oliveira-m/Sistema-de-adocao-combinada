@@ -9,7 +9,7 @@
         private:
             int id;
             string nome;
-            string endereco;
+            bool animalComdeficiencia;
             bool temPatio;
             string preferenciaPorte; // pequeno, médio, grande
             string estiloVida;   // saideiro ou caseiro
@@ -19,7 +19,7 @@
         public:
 
             Adotante();
-            Adotante(int id, string nome, string endereco, bool temPatio, string preferenciaPorte,
+            Adotante(int id, string nome, bool animalComdeficiencia, bool temPatio, string preferenciaPorte,
                     string estiloVida, bool temTempoLivre, bool dispostoAtencao);
 
         void cadastrarAdotante();
@@ -27,7 +27,7 @@
 
                 int getId() const {return id; }
                 string getNome() const {return nome; }
-                string getEndereco() const {return endereco; }
+                bool getanimalComdeficiencia() const {return animalComdeficiencia; }
                 bool getTemPatio() const {return temPatio; }
                 string getPreferenciaPorte() const {return preferenciaPorte; }
                 string getEstiloVida() const {return estiloVida; }
