@@ -1,5 +1,6 @@
 #include "Adotante.h"
 
+                // Construtor com parâmetros: inicializa o objeto já com valores fornecidos
     Adotante::Adotante(int id, string nome, bool animalComdeficiencia, bool temPatio,
                    string preferenciaPorte, string estiloVida, bool temTempoLivre,
                    bool dispostoAtencao)
@@ -7,20 +8,21 @@
                     estiloVida(estiloVida), temTempoLivre(temTempoLivre),
                     dispostoAtencao(dispostoAtencao) {}
 
+                    // Construtor padrão: cria um adotante "vazio" com valores iniciais
     Adotante::Adotante() : id(-1), nome(""), temPatio(false), preferenciaPorte(""),
                        estiloVida(""), temTempoLivre(false),
                        dispostoAtencao(false) {}
 
-
+        // Método para cadastrar um adotante interativamente
     void Adotante::cadastrarAdotante(){
         cout << "Digite o nome do adotante: ";
-        getline(cin, nome);
+        getline(cin, nome);   // lê o nome completo (com espaços)
 
         char resposta;
 
         cout << "Adotaria um animalzinho com deficiencia ou problemas de saude: (s/n): ";
         cin >> resposta;
-        animalComdeficiencia = (resposta == 's' || resposta == 'S');
+        animalComdeficiencia = (resposta == 's' || resposta == 'S');  // converte resposta em booleano
         cin.ignore();
 
         cout << "Possui patio: (s/n): ";
@@ -43,7 +45,7 @@
         dispostoAtencao = (resposta == 's' || resposta == 'S');
         cin.ignore();
     }
-
+        // Método para exibir os dados do adotante
     void Adotante::exibirAdotante() {
         cout << "\n--- Dados do Adotante ---\n";
         cout << "ID: " << id << "\n";
