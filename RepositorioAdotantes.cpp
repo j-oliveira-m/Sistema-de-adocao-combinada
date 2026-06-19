@@ -2,21 +2,22 @@
 #include <iostream>
 using namespace std;
 
-void RepositorioAdotantes::adicionar(const Adotante& adotante) {
-    adotantes.push_back(adotante);
+    // Adiciona um novo adotante ao repositório 
+    void RepositorioAdotantes::adicionar(const Adotante& adotante) {
+        adotantes.push_back(adotante);
 }
-
-Adotante RepositorioAdotantes::buscarPorId(int id) {
-    for (auto& a : adotantes) {
-        if (a.getId() == id) return a;
+    // Busca um adotante pelo ID
+    Adotante RepositorioAdotantes::buscarPorId(int id) {
+        for (auto& a : adotantes) {
+            if (a.getId() == id) return a; // retorna se encontrar
     }
-    cout << "Adotante nao encontrado!\n";
-    return Adotante(); // usa o construtor vazio
+            cout << "Adotante nao encontrado!\n";
+        return Adotante(); // usa o construtor vazio
 }
-
-void RepositorioAdotantes::listarAdotantes() {
-    for (auto& a : adotantes) {
-        a.exibirAdotante();
+        // Lista todos os adotantes cadastrados
+    void RepositorioAdotantes::listarAdotantes() {
+        for (auto& a : adotantes) {
+            a.exibirAdotante();   // chama método para mostrar os dados
     }
 }
 
