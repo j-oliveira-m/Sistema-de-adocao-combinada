@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    
+
     SistemaAdocaoFacade sistema;
     int opcao;
 
@@ -16,6 +16,7 @@ int main() {
         cout << "5. Realizar Match\n";
         cout << "6. Relatório de Pets Disponíveis\n";
         cout << "7. Adotar Pet (remover do relatório)\n";
+        cout << "8. editar cadastro do adotante \n";
         cout << "0. Sair\n";
         cout << "Escolha uma opção: ";
         cin >> opcao;
@@ -52,6 +53,7 @@ int main() {
                 sistema.removerPet(idPet);
                 break;
             }
+        
         }
     } while(opcao != 0);
 
